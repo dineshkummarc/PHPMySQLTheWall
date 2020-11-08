@@ -5,16 +5,16 @@
 //adjust the values below to match your database settings
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', 'root'); //may need to set DB_PASS as 'root'
-define('DB_DATABASE', 'New_Schema'); //make sure to set your database
+define('DB_PASS', ''); //may need to set DB_PASS as 'root'
+define('DB_DATABASE', 'phpmysqlthewall'); //make sure to set your database
 
 //connect to database host
-$connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_DATABASE, 8889);
+$connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_DATABASE, 3306);
 
 //make sure connection is good or die
 if ($connection->connect_errno) 
 {
-    die("Failed to connect to MySQL: (" . $connection->connect_errno . ") " . $connection->connect_error);
+    die("Failed to connect to mysql: (" . $connection->connect_errno . ") " . $connection->connect_error);
 }
 /*-----------------------END OF CONNECTION PROCESS------------------------*/
 
